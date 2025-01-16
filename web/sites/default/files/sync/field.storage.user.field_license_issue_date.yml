@@ -1,0 +1,20 @@
+uuid: ea207428-aabe-472a-aa0a-9466e58c52b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - user
+id: user.field_license_issue_date
+field_name: field_license_issue_date
+entity_type: user
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

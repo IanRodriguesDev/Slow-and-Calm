@@ -1,0 +1,14 @@
+uuid: 7e1c8ac6-4afc-469e-b24e-989ad65304c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vehicle_editor
+  module:
+    - user
+id: user_remove_role_action.vehicle_editor
+label: 'Remove the vehicle_editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: vehicle_editor

@@ -1,0 +1,22 @@
+uuid: b430b05f-8dd6-492e-b413-b7f6370fe9b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pattern_car
+label: 'Pattern Car'
+type: 'canonical_entities:node'
+pattern: 'car/[node:title]'
+selection_criteria:
+  a81443c5-668e-46ac-b211-788a1651f742:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a81443c5-668e-46ac-b211-788a1651f742
+    context_mapping:
+      node: node
+    bundles:
+      car: car
+selection_logic: and
+weight: -5
+relationships: {  }

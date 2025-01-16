@@ -1,0 +1,19 @@
+uuid: 4b5fe30e-422b-4e38-97f2-b698e32aff0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_number_chassi
+    - node.type.car
+id: node.car.field_registration_number_chassi
+field_name: field_registration_number_chassi
+entity_type: node
+bundle: car
+label: 'registration number (chassi)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

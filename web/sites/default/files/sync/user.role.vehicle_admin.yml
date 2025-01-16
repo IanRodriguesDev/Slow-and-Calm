@@ -1,0 +1,23 @@
+uuid: 7b956f96-cc0c-4668-8c61-a09afe156358
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.car
+    - workflows.workflow.car_workflow
+  module:
+    - content_moderation
+    - node
+    - toolbar
+id: vehicle_admin
+label: 'Vehicle Admin'
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create car content'
+  - 'delete any car content'
+  - 'edit any car content'
+  - 'use car_workflow transition create_new_published'
+  - 'view any unpublished content'

@@ -1,0 +1,40 @@
+uuid: cf45c122-b591-416d-ad7b-37037ddbba0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.car
+  module:
+    - content_moderation
+id: car_workflow
+label: 'Car Workflow'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      weight: 0
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 1
+      published: true
+      default_revision: true
+  transitions:
+    create_draft:
+      label: 'Create Draft'
+      from:
+        - draft
+      to: draft
+      weight: 0
+    create_new_published:
+      label: 'Create New Published'
+      from:
+        - draft
+      to: published
+      weight: 1
+  entity_types:
+    node:
+      - car
+  default_moderation_state: draft

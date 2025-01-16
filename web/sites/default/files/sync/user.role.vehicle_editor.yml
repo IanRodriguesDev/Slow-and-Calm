@@ -1,0 +1,25 @@
+uuid: b16d17a7-6ed6-4097-b2c3-708abfaf1ee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.car
+    - workflows.workflow.car_workflow
+  module:
+    - content_moderation
+    - node
+    - system
+    - toolbar
+id: vehicle_editor
+label: 'vehicle Editor'
+weight: 5
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create car content'
+  - 'delete own car content'
+  - 'edit own car content'
+  - 'use car_workflow transition create_draft'
+  - 'view own unpublished content'

@@ -1,0 +1,39 @@
+uuid: f5805f60-7199-40ea-8b1a-114c08c651df
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.car.field_brand
+    - field.field.node.car.field_color
+    - field.field.node.car.field_components
+    - field.field.node.car.field_date_of_release
+    - field.field.node.car.field_number_of_doors
+    - field.field.node.car.field_region
+    - field.field.node.car.field_registration_number_chassi
+    - node.type.car
+  module:
+    - user
+id: node.car.teaser
+targetEntityType: node
+bundle: car
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_brand: true
+  field_color: true
+  field_components: true
+  field_date_of_release: true
+  field_number_of_doors: true
+  field_region: true
+  field_registration_number_chassi: true

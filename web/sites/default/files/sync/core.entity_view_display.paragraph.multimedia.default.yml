@@ -1,0 +1,42 @@
+uuid: e2b2e7e9-e07e-4c82-b8ca-da76b0a8366c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multimedia.field_file
+    - field.field.paragraph.multimedia.field_reference_midia
+    - field.field.paragraph.multimedia.field_title_video
+    - paragraphs.paragraphs_type.multimedia
+  module:
+    - file
+id: paragraph.multimedia.default
+targetEntityType: paragraph
+bundle: multimedia
+mode: default
+content:
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_reference_midia:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_video:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

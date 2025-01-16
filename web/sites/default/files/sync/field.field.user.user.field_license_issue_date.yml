@@ -1,0 +1,21 @@
+uuid: 4b242fff-2033-4558-9081-7a037334a777
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_license_issue_date
+  module:
+    - datetime
+    - user
+id: user.user.field_license_issue_date
+field_name: field_license_issue_date
+entity_type: user
+bundle: user
+label: 'License issue date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

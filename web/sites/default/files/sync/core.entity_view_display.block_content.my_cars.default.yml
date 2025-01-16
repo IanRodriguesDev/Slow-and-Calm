@@ -1,0 +1,22 @@
+uuid: b40ea02c-ada4-40cf-8221-9c125e0c83d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.my_cars
+    - field.field.block_content.my_cars.body
+  module:
+    - text
+id: block_content.my_cars.default
+targetEntityType: block_content
+bundle: my_cars
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

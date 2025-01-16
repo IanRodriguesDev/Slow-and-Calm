@@ -1,0 +1,90 @@
+uuid: dbfaf4bb-1d47-4754-822a-e11b023bd2b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.car.field_brand
+    - field.field.node.car.field_color
+    - field.field.node.car.field_components
+    - field.field.node.car.field_date_of_release
+    - field.field.node.car.field_number_of_doors
+    - field.field.node.car.field_region
+    - field.field.node.car.field_registration_number_chassi
+    - node.type.car
+  module:
+    - datetime
+    - entity_reference_revisions
+    - options
+    - user
+id: node.car.default
+targetEntityType: node
+bundle: car
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_brand:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_color:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_date_of_release:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_number_of_doors:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_registration_number_chassi:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
