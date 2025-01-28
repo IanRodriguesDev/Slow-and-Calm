@@ -1,0 +1,7 @@
+name: 'Px Cars'
+type: module
+description: 'A custom module to process vehicle node titles.'
+core_version_requirement: ^9 || ^10
+package: custom
+dependencies:
+  - node:node 

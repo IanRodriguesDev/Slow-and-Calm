@@ -397,7 +397,7 @@ $settings['update_free_access'] = FALSE;
  *
  * Common values are:
  * - \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR
- * - \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST
+ * - \Symfony\Component\HttpF-oundation\Request::HEADER_X_FORWARDED_HOST
  * - \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT
  * - \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO
  * - \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
@@ -749,9 +749,12 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * For example:
  * @code
- * $settings['trusted_host_patterns'] = [
- *   '^www\.example\.com$',
- * ];
+$settings['trusted_host_patterns'] = [
+    '^slowandcalms\.ddev\.site$',
+    '^127\.0\.0\.1$',
+    '^localhost$',
+];J
+
  * @endcode
  * will allow the site to only run from www.example.com.
  *

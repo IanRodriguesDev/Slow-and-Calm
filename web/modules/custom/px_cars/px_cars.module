@@ -1,0 +1,60 @@
+    <?php
+
+    use Drupal\node\Entity\Node;
+
+    /**
+     * @file
+     * Custom preprocess function for the PX Cars module.
+     */ 
+
+    /**
+     * Implements hook_preprocess_node().
+     * Adds custom variables to the car node template.
+     */
+    function px_cars_preprocess_node__car(array &$variables) {
+      /** @var \Drupal\node\Entity\Node $node */
+      $node = $variables['elements']['#node'];
+
+      //get node data
+      $owner_entities = $node->get('field_owner')->referencedEntities();
+      if (!empty($owner_entities)) {
+        $owner_name = $owner_entities[0]->get('name')->value;
+      } 
+      else {
+        $owner_name = 'Owner not specified';
+      }
+
+      $region_entities = $node->get('field_region')->referencedEntities();
+      if (!empty($region_entities)) {
+        $region_name = $region_entities[0]->get('name')->value;  
+      } 
+      else {
+        $region_name = 'Region not specified';
+      }
+
+      $variables['car_title'] = $node->getTitle(); //car title
+      $variables['car_owner'] = $owner_name; //car driver
+      $variables['car_region'] = $region_name; //car region6
+      $teste = 'tete';
+    }
+    /**
+     * Implements hook_theme().
+     */
+    function px_cars_theme() {
+      return [
+        'node__car' => [
+          'variables' => [
+            'car_title' => NULL,
+            'car_owner' => NULL,
+            'car_region' => NULL,
+          ],
+          'template' => 'node--car',
+        ],
+      ];
+    }
+
+    /**
+     * Implements hook_preprocess_node().
+     */
+
+      
