@@ -53,8 +53,39 @@
       ];
     }
 
-    /**
-     * Implements hook_preprocess_node().
-     */
+/**
+ * Implement hook_form_alter().
+ */
+function px_cars_form_alter(&$form,\Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  //check ing if the form is correct 
+  if ($form_id == 'webform_submission_contact_add_form') {
+    //1.Changing field order
+    if (isset($form['elements']['what_vehicle_do_you_own'])) {  
+      $form['elements']['what_vehicle_do_you_own']['#weight'] = rand(10, 10);
+    }
+    
+    //2.Changing label of the Name
+    if (isset($form['elements']['name'])) {
+      $form['elements']['name']['#title'] = t('Please Enter Your First Name');  
+    }
 
-      
+    //3.Add a descripition to the 'Description' fild
+    if (isset($form['elements']['description'])) {
+      $form['elements']['description']['#description'] = t('Please, enter some comments here!');
+    }
+
+    //4.Chenging the submit botom text.
+    if (isset($form['actions']['submit'])) {
+      $form['actions']['submit']['#value'] = t('Let´s go!');
+    }
+    
+    //5.Add chekbox field 
+    $form['opt_in'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Would you like to opt in?'),
+      '#default_value' => 0,
+      '#description' => t('Check this box if you want to opt in.'),
+    ];
+
+  }
+}
